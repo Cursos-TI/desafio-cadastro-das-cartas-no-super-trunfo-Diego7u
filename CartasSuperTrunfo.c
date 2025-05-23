@@ -34,8 +34,19 @@ void lerCarta(Carta *carta) {
 
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &carta->pontosTuristicos);
+    // Exibe os dados lidos
+    float densidade = (float)carta->populacao / carta->area;
+    //calculo de densidade populacao dividida pela area da cidade
+    
+    float pibPerCapita = carta->pib / carta->populacao;
+    //calculo de pibpercapita pib divido pela populacao
+
 }// Função para exibir os dados de uma carta
 void exibirCarta(Carta carta, int numCarta) {
+    float densidade = (float)carta.populacao / carta.area;
+    // Calcula a densidade populacional
+    float pibPerCapita = carta.pib / carta.populacao;
+    // Calcula o PIB per capita
     printf("\nCarta %d:\n", numCarta);
     printf("Estado: %c\n", carta.estado);
     printf("Código: %s\n", carta.codigo);
@@ -44,6 +55,9 @@ void exibirCarta(Carta carta, int numCarta) {
     printf("Área: %.2f km²\n", carta.area);
     printf("PIB: %.2f bilhões de reais\n", carta.pib);
     printf("Número de Pontos Turísticos: %d\n", carta.pontosTuristicos);
+    printf("PIB per capita: %.2f reais\n", pibPerCapita);
+    printf("Densidade populacional: %.2f habitantes/km²\n", densidade);
+
 }// Função principal
 // Lê os dados de duas cartas e exibe as informações
 
@@ -61,4 +75,3 @@ int main() {
 // Exibe as informações das cartas
     return 0;
 }
-
