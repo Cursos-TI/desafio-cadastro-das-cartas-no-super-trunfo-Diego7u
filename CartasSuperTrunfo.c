@@ -104,6 +104,7 @@ void compararCartas(Carta carta1, Carta carta2) {
     } else {
         printf("⚖ Empate no PIB: %.2f bilhões de reais\n", carta1.pib);
     }
+}
 
 // Função principal
 int main() {
